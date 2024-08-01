@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav {
+            background: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .step {
+            margin: 10px 0;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #444;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        .product-item img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            margin: 0;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .product-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loja Online</h1>
+    </header>
+
+    <nav>
+        <a href="#acesso">Acesso</a>
+        <a href="#navegar">Navegação</a>
+        <a href="#produto">Produto</a>
+        <a href="#carrinho">Carrinho</a>
+        <a href="#finalizar">Finalizar</a>
+    </nav>
+
+    <div class="container">
+        <!-- Acesso ao site -->
+        <section id="acesso">
+            <h2>1. Acesso ao site</h2>
+            <p>Bem-vindo à nossa loja online! Explore nossas categorias e descubra nossos produtos.</p>
+        </section>
+
+        <!-- Navegação pelos produtos -->
+        <section id="navegar">
+            <h2>2. Navegação pelos produtos</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto 1">
+                    <h3>Produto 1</h3>
+                    <p>Descrição do Produto 1</p>
+                    <a href="#produto" class="button">Ver detalhes</a>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p>Descrição do Produto 2</p>
+                    <a href="#produto" class="button">Ver detalhes</a>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p>Descrição do Produto 3</p>
+                    <a href="#produto" class="button">Ver detalhes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalhes do produto -->
+        <section id="produto">
+            <h2>3. Detalhes do produto</h2>
+            <img src="https://via.placeholder.com/300" alt="Produto Detalhado">
+            <h3>Produto Detalhado</h3>
+            <p>Descrição detalhada do produto.</p>
+            <a href="#carrinho" class="button">Adicionar ao carrinho</a>
+        </section>
+
+        <!-- Carrinho de compras -->
+        <section id="carrinho">
+            <h2>4. Carrinho de compras</h2>
+            <p>Itens no seu carrinho:</p>
+            <ul>
+                <li>Produto Detalhado - 1 unidade</li>
+            </ul>
+            <a href="#finalizar" class="button">Finalizar compra</a>
+        </section>
+
+        <!-- Finalização da compra -->
+        <section id="finalizar">
+            <h2>5. Finalização da compra</h2>
+            <p>Por favor, faça login ou crie uma conta para continuar.</p>
+            <a href="#login" class="button">Login/Criar Conta</a>
+        </section>
+
+        <!-- Login/Criação de conta -->
+        <section id="login">
+            <h2>6. Login/Criação de conta</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <a href="#entrega" class="button">Login/Criar Conta</a>
+        </section>
+
+        <!-- Informações de entrega -->
+        <section id="entrega">
+            <h2>7. Informações de entrega</h2>
+            <div class="form-group">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="zipcode">CEP:</label>
+                <input type="text" id="zipcode" name="zipcode">
+            </div>
+            <a href="#pagamento" class="button">Próximo</a>
+        </section>
+
+        <!-- Informações de pagamento -->
+        <section id="pagamento">
+            <h2>8. Informações de pagamento</h2>
+            <div class="form-group">
+                <label for="cardnumber">Número do Cartão:</label>
+                <input type="text" id="cardnumber" name="cardnumber">
+            </div>
+            <div class="form-group">
+                <label for="expirydate">Data de Validade:</label>
+                <input type="text" id="expirydate" name="expirydate">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+            </div>
+            <a href="#resumo" class="button">Próximo</a>
+        </section>
+
+        <!-- Resumo do pedido -->
+        <section id="resumo">
+            <h2>9. Resumo do pedido</h2>
+            <p>Revise os detalhes do seu pedido:</p>
+            <ul>
+                <li>Produto Detalhado - 1 unidade</li>
+                <li>Endereço de entrega: Exemplo de Endereço</li>
+                <li>Pagamento: Cartão de Crédito</li>
+            </ul>
+            <a href="#confirmacao" class="button">Confirmar Pedido</a>
+        </section>
+
+        <!-- Confirmação do pedido -->
+        <section id="confirmacao">
+            <h2>10. Confirmação do pedido</h2>
+            <p>Seu pedido foi confirmado! Um email de confirmação foi enviado para você.</p>
+            <a href="#acesso" class="button">Voltar ao início</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
